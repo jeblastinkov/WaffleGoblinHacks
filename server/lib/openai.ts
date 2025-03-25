@@ -37,8 +37,8 @@ export async function generateLifehack(): Promise<LifehackResponse> {
         {
           role: "user",
           content: 
-            "Generate a fun, practical lifehack. Respond with a JSON object containing: " +
-            "1. content: The lifehack text (100-150 words max) " +
+            "Generate a fun, practical lifehack that is EXACTLY 280 characters or less. Respond with a JSON object containing: " +
+            "1. content: The lifehack text (MUST be 280 characters or less) " +
             "2. category: A single category (Kitchen, Home, Tech, Garden, Money, Health, Travel, or Cleaning) " +
             "3. tags: An array of 2-3 relevant tags " +
             "4. image_prompt: A short description for a simple image that represents this lifehack"
@@ -60,9 +60,9 @@ export async function generateLifehack(): Promise<LifehackResponse> {
   } catch (error) {
     console.error("Error generating lifehack:", error);
     
-    // Return fallback content if API fails
+    // Return fallback content if API fails (under 280 characters)
     return {
-      content: "Keep a dedicated 'lost items' box in your home. Whenever you find something out of place, put it there. Check this box first when you're looking for something missing.",
+      content: "Keep a dedicated 'lost items' box at home. When you find something out of place, put it there. Check this box first when looking for missing things!",
       category: "Home",
       tags: ["Organization", "Productivity"],
       image_prompt: "A small box labeled 'lost items' with miscellaneous household objects"
