@@ -1,13 +1,9 @@
 import HeroSection from "@/components/HeroSection";
-import PreviousLifehacks from "@/components/PreviousLifehacks";
-import CategorySection from "@/components/CategorySection";
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col items-center justify-center min-h-[calc(100vh-70px)]">
       <HeroSection />
-      <PreviousLifehacks />
-      <CategorySection />
-    </>
+    </div>
   );
 }
