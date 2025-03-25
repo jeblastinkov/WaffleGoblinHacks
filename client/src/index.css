@@ -11,3 +11,65 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Animation delay classes */
+  .delay-75 {
+    animation-delay: 75ms;
+  }
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+  .delay-450 {
+    animation-delay: 450ms;
+  }
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+  .delay-550 {
+    animation-delay: 550ms;
+  }
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+  .delay-650 {
+    animation-delay: 650ms;
+  }
+}
+
+/* Custom styling */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.pixel-border {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.pixel-button {
+  position: relative;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.1s;
+}
+
+.pixel-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+}
